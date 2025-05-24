@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.new-navbar-parent {
+  position: sticky;
+  display: flex;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+}
+.new-navbar {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+  z-index: 1001;
+}
+.new-navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none; 
+}
+.new-navbar li {
+  margin-left: 30px;
+}
+.new-navbar li a {
+  color: black;
+  font-size: 35px;
+  font-weight: 1000;
+  text-decoration: none;
+  opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+}
+.new-navbar a:hover {
+  opacity: 1;
+}
+.new-navbar .logo {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0 0 30px;
+  opacity: 1;
+  transition: none;
+  transform: none;
+}
+.new-navbar .logo a {
+  display: block;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+.new-navbar .logo a:hover {
+  transform-origin: center;
+  transform: rotate(-0.25turn);
+}
+.new-navbar .logo img {
+  height: 40px;
+  width: 40px;
+}
+@media (max-width: 935px) {
+  .new-navbar-parent {
+    justify-content: center;
+    background-color: white;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .hamburger-menu {
+    position: sticky;
+    display: flex;
+    font-size: 40px;
+    background: none;
+    border: none;
+    padding-bottom: 5px;
+    cursor: pointer;
+    z-index: 1002;
+  }
+  .new-navbar {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 935px) {
+.hamburger-menu {
+  display: none; 
+}
+}
+
+
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: black;
+  width: 100%;
+  margin-top: auto; /* This ensures the footer stays at the bottom */
+}
+
+footer p {
+  font-weight: 300;
+}
