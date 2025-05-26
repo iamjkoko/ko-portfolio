@@ -1,3 +1,2 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 videos/td-background.mp4 filter=lfs diff=lfs merge=lfs -text
-videos/machina-full.mp4 filter=lfs diff=lfs merge=lfs -text
