@@ -153,16 +153,14 @@ body {
     color: white;
 }
 
-#project-video-hor {
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 40px;
-    max-width: 1440px;
-    max-height: 1035px;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    padding-bottom: 2%;
+.machina-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3% 0;
+  width: 960px;
+  max-width: 100%;
 }
 
 .project-info {
