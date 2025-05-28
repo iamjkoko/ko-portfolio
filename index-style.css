@@ -53,6 +53,8 @@ transform: translateY(0);
   align-items: center;
   z-index: 10000;
   transition: opacity 0.8s ease-out; /* Smooth fade-out */
+  opacity: 1 !important; /* Ensures preloader remains visible */
+  animation: none !important; /* Prevents fade-in from applying */
 }
 
 .loader {
