@@ -71,3 +71,11 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
+
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+    document.body.classList.add("loaded");
+  }, 1000); // Ensures smooth transition
+});
