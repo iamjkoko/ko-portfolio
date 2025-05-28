@@ -75,7 +75,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener("load", function () {
   setTimeout(() => {
-    document.getElementById("preloader").style.display = "none";
-    document.body.classList.add("loaded");
-  }, 1000); // Ensures smooth transition
+    document.getElementById("preloader").classList.add("hidden");
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none"; // Remove from DOM after fade-out
+    }, 800); // Match transition duration
+  }, 1000);
 });
+

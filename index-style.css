@@ -52,6 +52,7 @@ transform: translateY(0);
   justify-content: center;
   align-items: center;
   z-index: 10000;
+  transition: opacity 0.8s ease-out; /* Smooth fade-out */
 }
 
 .loader {
@@ -72,8 +73,9 @@ transform: translateY(0);
   }
 }
 
-body.loaded {
-  opacity: 1;
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction during fade-out */
 }
 
 #hero {
