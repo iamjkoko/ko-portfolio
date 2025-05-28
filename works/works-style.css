@@ -16,6 +16,10 @@ opacity: 0;
 transition: opacity 0.5s ease-in-out;
 }
 
+video {
+  transition: opacity 1s ease-in-out;
+}
+
 .new-navbar-parent {
   position: sticky;
   display: flex;
