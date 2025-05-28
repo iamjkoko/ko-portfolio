@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Fade-in effect for sections
+  // Fade-in effect for sections and videos
   const fadeInElements = document.querySelectorAll("div, video, section");
 
   const observer = new IntersectionObserver((entries) => {
@@ -49,13 +49,16 @@ window.onclick = function(event) {
   }
 };
 
-// Smooth page transition with video fade-out
+// Smooth page transition with **video fade-out**
 window.transitionToPage = function(href) {
-  const video = document.querySelector('.background'); // Targeting the background video
-  if (video) {
+  const videoElements = document.querySelectorAll("video"); // Select all videos
+
+  videoElements.forEach(video => {
       video.style.opacity = "0"; // Apply fade-out effect
-  }
+  });
+
   document.querySelector("body").style.opacity = "0"; // Fade out body as well
+
   setTimeout(() => {
       window.location.href = href;
   }, 800); // Match CSS transition duration
@@ -65,11 +68,11 @@ window.transitionToPage = function(href) {
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector("body").style.opacity = 1;
 
-  // Reset opacity for video after page load
-  const video = document.querySelector('.background');
-  if (video) {
-      video.style.opacity = "1";
-  }
+  // Reset opacity for all videos after page load
+  const videoElements = document.querySelectorAll("video");
+  videoElements.forEach(video => {
+      video.style.opacity = "1"; // Reset opacity
+  });
 
   // Apply transition effect when clicking navigation links
   document.querySelectorAll("nav a, .learn-more-link").forEach(anchor => {
