@@ -73,12 +73,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    document.getElementById("preloader").classList.add("hidden"); // Only triggers fade-out
-    setTimeout(() => {
-      document.getElementById("preloader").style.display = "none";
-    }, 800);
-  }, 1000);
-});
 
