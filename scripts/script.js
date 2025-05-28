@@ -58,7 +58,7 @@ window.transitionToPage = function(href) {
   document.querySelector("body").style.opacity = "0"; // Fade out body as well
   setTimeout(() => {
       window.location.href = href;
-  }, 500); // Match CSS transition duration
+  }, 800); // Match CSS transition duration
 };
 
 // Ensure smooth fade-in effect on page load
