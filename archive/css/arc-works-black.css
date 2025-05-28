@@ -113,7 +113,8 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: black;
+      background-color: white;
+      border: 1px solid #f0f0f0;
       width: 100vw; /* Makes it full width */
       left: 50%;
       transform: translateX(-50%);
@@ -121,11 +122,11 @@
       z-index: 1;
     }
     .dropdown-content a {
-      color: white;
+      color: black;
       padding: 5% 10%;
       text-decoration: none;
       display: block;
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: 600;
     }
     .show {display:block;}
