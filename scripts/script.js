@@ -22,19 +22,6 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Image fade-out swap effect
-document.querySelectorAll('.shadow').forEach(img => {
-  img.addEventListener('click', () => {
-      img.style.opacity = "0"; // Fade out
-      setTimeout(() => {
-          let tempSrc = img.src;
-          img.src = img.getAttribute('data-alt');
-          img.setAttribute('data-alt', tempSrc);
-          img.style.opacity = "1"; // Fade in
-      }, 200); // Delay to allow the fade-out effect
-  });
-});
-
 // Dropdown menu toggle function
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
