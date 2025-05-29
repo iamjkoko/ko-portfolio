@@ -142,6 +142,7 @@ display: none;
   height: 100vh;
   justify-content: center;
   margin: 0 auto;
+  width: 100%;
 }
 .about-container {
   display: flex;
@@ -199,15 +200,18 @@ display: none;
   }
   .profile-image {
     margin-right: 0;
+    padding: 10%;
   }
   .description {
-    padding: 8% 0 10%;
+    padding: 2% 10% 10%;
     max-width: 480px;
   }
   .socials {
     display: flex;
     gap: 10%;
     padding: 10% 0;
+    justify-content: center;
+    margin: 0 auto;
   }
   .socials img {
     max-width: 3rem;
