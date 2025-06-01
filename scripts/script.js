@@ -52,11 +52,6 @@ window.transitionToPage = function(href) {
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelector("body").style.opacity = 1;
 
-  // Reset opacity for video after page load
-  const video = document.querySelector('.background');
-  if (video) {
-      video.style.opacity = "1";
-  }
 
   // Apply transition effect when clicking navigation links
   document.querySelectorAll("nav a, .learn-more-link").forEach(anchor => {
