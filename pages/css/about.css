@@ -217,4 +217,9 @@ display: none;
     max-width: 3rem;
     max-height: 3rem;
   }
+  .signature img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
