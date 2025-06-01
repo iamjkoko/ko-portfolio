@@ -179,10 +179,11 @@ padding: 0 30px;
 @media (max-width: 935px) {
   #works {
     margin-top: 0;
+    margin-bottom: 5px;
   }
   .gallery {
     grid-template-columns: 1fr;
-    padding: 20px;
+    padding: 10px;
     gap: 15px;
   }
   .thumbnail {

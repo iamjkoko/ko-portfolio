@@ -200,11 +200,11 @@ display: none;
   }
   .profile-image {
     margin-right: 0;
-    padding: 10%;
+    width: 100%;
   }
   .description {
-    padding: 2% 10% 10%;
-    max-width: 480px;
+    padding: 10% 4% 10%;
+    width: 100%;
   }
   .socials {
     display: flex;

@@ -180,6 +180,7 @@ body {
   @media (max-width: 935px) {
     #archive {
       margin-top: 0;
+      margin-bottom: 5px;
     }
     .gallery {
       grid-template-columns: 1fr;
