@@ -55,9 +55,6 @@ transform: translateY(0);
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
 }
-.background.fade-out {
-  animation: fadeOut 0.8s ease-in-out forwards;
-}
 .navbar {
   display: flex;
   flex-wrap: wrap;
