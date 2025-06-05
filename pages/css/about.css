@@ -180,7 +180,6 @@ display: none;
 
 .description img {
   max-width: 240px;
-  max-height: auto;
   padding-top: 3%;
 }
 
@@ -217,7 +216,7 @@ display: none;
     max-width: 3rem;
     max-height: 3rem;
   }
-  .signature img {
+  .description img {
     display: flex;
     justify-content: center;
     margin: 0 auto;

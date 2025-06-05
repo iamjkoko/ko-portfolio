@@ -204,7 +204,7 @@
       min-height: 0;
     }
     #project-main img {
-      margin-top: 2rem;
+      margin: 5%;
     }
     .project-info {
       flex-direction: column;
@@ -269,7 +269,7 @@
   }
   @media (max-width: 935px) {
     .project-intro-text {
-      padding: 5% 12% 2%;
+      padding: 5% 10% 2%;
     }
     #project-intro h5 {
       font-size: 1rem;
@@ -357,7 +357,7 @@
   }
   @media (max-width: 935px) {
     .project-desc-body {
-      padding: 2% 12% 4%;
+      padding: 2% 10% 10%;
     }
     .project-desc-body h5 {
       font-size: 1rem;
@@ -377,6 +377,11 @@
     flex-direction: column;
     position: relative;
     font-weight: 300;
+  }
+  @media (max-width: 935px) {
+    .progress-title h3 {
+      font-size: 1rem;
+    }
   }
 
   .progress-img {

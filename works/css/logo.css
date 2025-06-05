@@ -204,6 +204,9 @@ body {
   word-spacing: .1rem;
 }
 @media (max-width: 935px) {
+  #project-video-hor, #project-main img {
+    margin-top: 40px;
+  }
   .project-info {
     flex-direction: column;
   }
@@ -215,7 +218,7 @@ body {
   .project-basics h2, .project-basics h3 {
     font-size: 1rem;
   }
-  
+
   .project-intro h4 {
     padding-top: 5%;
     font-size: 1rem;
@@ -254,11 +257,14 @@ body {
   margin-bottom: 1%;
 }
 @media (max-width: 935px) {
+  #project-description {
+    padding: 0 4%;
+  }
   .names {
     padding: 0 8% 8%;
   }
   .names-img {
-    padding: 5%;
+    margin-bottom: 15%;
   }
   .names-desc h5 {
     font-size: 1rem;
@@ -309,6 +315,9 @@ body {
 @media (max-width: 935px) {
   .progress-img {
     padding-top: 2%;
+  }
+  .progress-vid {
+    padding-top: 20px;
   }
 }
 

@@ -244,6 +244,9 @@ body {
   font-weight: 300;
 }
 @media (max-width: 935px) {
+  #project-description {
+    padding: 0 4% 2%;
+  }
   .project-desc-body {
     margin-bottom: 5%;
   }
