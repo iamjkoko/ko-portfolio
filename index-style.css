@@ -85,6 +85,9 @@ transform: translateY(0);
     align-items: center;
     gap: 40px;
   }
+  .navbar a {
+    text-decoration: none;
+  }
 }
 
 
