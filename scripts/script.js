@@ -67,4 +67,34 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".shadow");
+
+  images.forEach((image) => {
+      // Initialize `data-active`
+      image.setAttribute("data-active", "false");
+      const originalSrc = image.getAttribute("src");
+      const altSrc = image.getAttribute("data-alt");
+
+      image.addEventListener("click", function () {
+          this.style.transition = "opacity 0.3s ease-in-out"; // Add transition effect
+          this.style.opacity = 0; // Start fade-out effect
+
+          setTimeout(() => {
+              // Toggle between original and alternative image
+              if (this.getAttribute("data-active") === "true") {
+                  this.src = originalSrc;
+                  this.setAttribute("data-active", "false");
+              } else {
+                  this.src = altSrc;
+                  this.setAttribute("data-active", "true");
+              }
+              this.style.opacity = 1; // Fade in new image
+          }, 300); // Matches CSS transition duration
+      });
+  });
+});
+
+
+
 
