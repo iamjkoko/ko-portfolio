@@ -1,88 +1,74 @@
+// Run once the HTML is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Fade-in effect for sections
+  /*** Fade-in Elements on Scroll ***/
   const fadeInElements = document.querySelectorAll("div, video, section");
 
   const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target); // Stops observing once visible
-          }
-      });
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
   }, { threshold: 0.1 });
 
-  fadeInElements.forEach((el) => observer.observe(el));
+  fadeInElements.forEach(el => observer.observe(el));
 
-  // Fade-in effect for the body on page load
-  document.querySelector("body").style.opacity = 1;
+  /*** Fade-in Body on Page Load ***/
+  document.body.style.opacity = 1;
+
+  /*** Smooth Page Transitions (Click Links → Fade Out → Navigate) ***/
+  document.querySelectorAll("nav a, .learn-more-link").forEach(anchor => {
+    anchor.addEventListener("click", (event) => {
+      const href = anchor.getAttribute("href");
+      if (!href.startsWith("#") && !anchor.hasAttribute("target")) {
+        event.preventDefault();
+        transitionToPage(href);
+      }
+    });
+  });
+
+  /*** Clickable Image Toggle (Shadow Images) ***/
+  document.querySelectorAll(".shadow").forEach((image) => {
+    image.setAttribute("data-active", "false");
+    const originalSrc = image.getAttribute("src");
+    const altSrc = image.getAttribute("data-alt");
+
+    image.addEventListener("click", () => {
+      const isActive = image.getAttribute("data-active") === "true";
+      image.src = isActive ? originalSrc : altSrc;
+      image.setAttribute("data-active", isActive ? "false" : "true");
+    });
+  });
 });
 
-// Smooth scroll to top
+/*** Scroll to Top Function ***/
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Dropdown menu toggle function
+/*** Toggle Dropdown Menu ***/
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Close dropdown when clicking outside
+/*** Close Dropdown When Clicking Outside ***/
 window.onclick = function(event) {
   if (!event.target.closest('.dropdown-content') && !event.target.matches('.hamburger-menu')) {
-      document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-          dropdown.classList.remove('show');
-      });
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+      dropdown.classList.remove('show');
+    });
   }
 };
 
-// Smooth page transition with video fade-out
-window.transitionToPage = function(href) {
-  const video = document.querySelector('.background'); // Targeting the background video
+/*** Smooth Page Transition with Fade-Out ***/
+function transitionToPage(href) {
+  const video = document.querySelector('.background');
   if (video) {
-      video.style.opacity = "0"; // Apply fade-out effect
+    video.style.opacity = "0";
   }
-  document.querySelector("body").style.opacity = "0"; // Fade out body as well
+  document.body.style.opacity = "0";
   setTimeout(() => {
-      window.location.href = href;
-  }, 800); // Match CSS transition duration
-};
-
-// Ensure smooth fade-in effect on page load
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector("body").style.opacity = 1;
-
-
-  // Apply transition effect when clicking navigation links
-  document.querySelectorAll("nav a, .learn-more-link").forEach(anchor => {
-      anchor.addEventListener("click", function(event) {
-          const href = this.getAttribute("href");
-
-          // Exclude external links (those with "target=_blank")
-          if (!href.startsWith("#") && !this.hasAttribute("target")) {
-              event.preventDefault();
-              transitionToPage(href);
-          }
-      });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".shadow");
-
-  images.forEach((image) => {
-      image.setAttribute("data-active", "false");
-      const originalSrc = image.getAttribute("src");
-      const altSrc = image.getAttribute("data-alt");
-
-      image.addEventListener("click", function () {
-          this.src = this.getAttribute("data-active") === "true" ? originalSrc : altSrc;
-          this.setAttribute("data-active", this.getAttribute("data-active") === "true" ? "false" : "true");
-      });
-  });
-});
-
-
-
-
-
+    window.location.href = href;
+  }, 800);
+}
