@@ -327,6 +327,9 @@
     .ref-img img {
       max-height: none;
     }
+    figcaption {
+      font-size: 0.5rem;
+    }
   } 
 
 
