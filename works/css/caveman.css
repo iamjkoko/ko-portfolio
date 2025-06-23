@@ -274,6 +274,9 @@
     #project-intro h5 {
       font-size: 1rem;
     }
+    #project-intro img {
+      padding: 0 8% 2%;
+    }
     .image-credit h6 {
       font-size: 0.6rem;
     }
@@ -328,6 +331,7 @@
       width: 100%; /* Makes it responsive */
       height: auto; /* Maintains aspect ratio */
       overflow: hidden;
+      border-radius: 3px;
     }
   }
   
@@ -408,6 +412,9 @@
       }
     .progress-img {
         grid-template-columns: 1fr;
+    }
+    .progress-img img {
+      border-radius: 6px;
     }
   }
 

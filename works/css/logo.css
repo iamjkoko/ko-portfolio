@@ -297,6 +297,9 @@ body {
   .progress-img {
       grid-template-columns: 1fr;
   }
+  .progress-img img {
+    border-radius: 6px;
+  }
 }
 
 .progress-vid {
@@ -318,6 +321,9 @@ body {
   }
   .progress-vid {
     padding-top: 20px;
+  }
+  .progress-vid video {
+    border-radius: 6px;
   }
 }
 

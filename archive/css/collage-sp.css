@@ -262,8 +262,11 @@
     max-height: 540px;
     }
   @media (max-width: 935px) {
+    #project-description {
+      margin-top: 5%;
+    }
     .project-desc-body {
-      padding: 5% 8%;
+      padding: 5% 10% 8%;
     }
     .project-desc-body h5 {
       font-size: 1rem;
@@ -272,7 +275,6 @@
     .sp-video {
         width: 100%;
         max-width: 960px;
-
         padding-bottom: 56.25%; /* Aspect ratio (16:9) */
         height: 0;
         position: relative;

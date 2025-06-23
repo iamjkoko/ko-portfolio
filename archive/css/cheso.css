@@ -193,6 +193,7 @@
       width: 100%; /* Makes it responsive */
       height: auto; /* Maintains aspect ratio */
       overflow: hidden;
+      border-radius: 3px;
     }
   }
   
@@ -284,6 +285,7 @@
     max-height: 500px;
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
   @media (max-width: 935px) {
     .project-desc-body {
@@ -296,6 +298,9 @@
     .project-desc-img {
       grid-template-columns: repeat(1, 1fr);
       padding: 4% 8% 5%;
+    }
+    .project-desc-img img {
+      border-radius: 6px;
     }
   }
 
