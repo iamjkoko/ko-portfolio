@@ -165,17 +165,18 @@ padding: 0 30px;
 .thumbnail {
   max-width: 810px;
   max-height: 540px;
-  width: 100%; /* Makes it responsive */
-  height: auto; /* Maintains aspect ratio */
+  width: 100%;
+  aspect-ratio: 3 / 2; /* same as 810x540 */
   overflow: hidden;
-  object-fit: cover;
 }
+
 .thumbnail video, .thumbnail img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%; /* force it to fill height */
   object-fit: cover;
 }
+
 @media (max-width: 935px) {
   #works {
     margin-top: 0;
