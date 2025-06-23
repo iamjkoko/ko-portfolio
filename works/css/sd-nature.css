@@ -209,6 +209,7 @@ body {
 @media (max-width: 935px) {
   #project-video-hor, #project-main img {
     margin-top: 40px;
+    padding: 0 2%;
   }
   .project-info {
     flex-direction: column;
@@ -274,6 +275,14 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+  }
+  @media (max-width: 935px) {
+    .progress-img {
+        padding: 0 10% 4%;
+    }
+    .progress-img img {
+        border-radius: 3px;
+    }
   }
 
 
