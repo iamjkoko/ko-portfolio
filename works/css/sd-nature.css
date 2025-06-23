@@ -179,7 +179,6 @@ body {
   padding: 2% 10% 0;
   flex-direction: row;
   width: 90%;
-  min-height: 300px;
   flex-grow: 1; /* Push the footer down */
 }
 
@@ -207,26 +206,30 @@ body {
   word-spacing: .1rem;
 }
 @media (max-width: 935px) {
-  #project-video-hor, #project-main img {
-    margin-top: 40px;
-    padding: 0 2%;
-  }
-  .project-info {
-    flex-direction: column;
-  }
-  .project-basics h1 {
-    font-size: 2.3rem;
-    font-weight: 900;
-  }
-  
-  .project-basics h2, .project-basics h3 {
-    font-size: 1rem;
-  }
+    #project-main {
+        min-height: 0;
+    }
+    #project-video-hor, #project-main img {
+        margin-top: 40px;
+        padding: 0 2%;
+    }
+    .project-info {
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+    .project-basics h1 {
+        font-size: 2.3rem;
+        font-weight: 900;
+    }
+    
+    .project-basics h2, .project-basics h3 {
+        font-size: 1rem;
+    }
 
-  .project-intro h4 {
-    padding-top: 5%;
-    font-size: 1rem;
-}
+    .project-intro h4 {
+        padding-top: 5%;
+        font-size: 1rem;
+    }
 }
 
 
