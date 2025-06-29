@@ -146,7 +146,7 @@
   .divider {
     border: 0.8px solid #bdbdbd;
     width: 90%;
-    margin: 20px auto;
+    margin: 40px auto;
   }
   
   #project-main {
@@ -168,8 +168,8 @@
   }
   .cheso-cont {
     overflow: hidden;
-    max-width: 450px;
-    max-height: 300px;
+    max-width: 420px;
+    max-height: 280px;
     width: 100%;
     height: auto;
     border-radius: 5px;
