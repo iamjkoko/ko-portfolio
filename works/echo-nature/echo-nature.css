@@ -253,6 +253,13 @@ video {
     flex-direction: row;
     align-items: center;
   }
+  video::-webkit-media-controls {
+    display: none !important;
+    opacity: 0;
+  }
+  video::-webkit-media-controls-enclosure {
+    display: none !important;
+  }
 }
 
 
