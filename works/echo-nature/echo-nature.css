@@ -166,6 +166,8 @@ video {
   align-items: center;
   opacity: 1;
   transition: opacity 0.4s ease;
+  background: transparent;
+  background-color: transparent;
 }
 .controls.hidden {
   opacity: 0;
@@ -176,6 +178,7 @@ video {
   display: flex;
   align-items: center;
   gap: 16px;
+  background: transparent;
 }
 .controls button {
   background: transparent;
@@ -183,6 +186,9 @@ video {
   cursor: pointer;
   padding: 6px;
   transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .controls button:active {
   transform: scale(0.92);
@@ -191,12 +197,15 @@ video {
   width: 20px;
   height: 20px;
   filter: invert(100%);
+  background: transparent;
+  background-color: transparent;
 }
 /* Volume Slider */
 .volume-control {
   position: relative;
   display: flex;
   align-items: center;
+  background: transparent;
 }
 #volume-slider {
   width: 100px;
@@ -205,6 +214,7 @@ video {
   transition: opacity 0.3s ease;
   margin-left: 8px;
   accent-color: white;
+  background: transparent;
 }
 .volume-control.show-slider #volume-slider,
 .volume-control:hover #volume-slider {
