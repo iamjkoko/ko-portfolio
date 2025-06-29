@@ -52,12 +52,11 @@ volumeControl.addEventListener("mouseleave", () => {
   volumeControl.classList.remove("show-slider");
 });
 
-// Restart video
 restartBtn.addEventListener("click", () => {
-  video.currentTime = 0;
-  video.play();
-  updatePlayIcon();
-  showControls();
+  video.pause();            // Just in case it's playing
+  video.currentTime = 0;    // Reset to start
+  updatePlayIcon();         // Sync icon
+  showControls();           // Keep UI visible
 });
 
 // Volume icon update
@@ -76,10 +75,17 @@ function showControls() {
   }, 3000);
 }
 
-videoContainer.addEventListener("mousemove", showControls);
-videoContainer.addEventListener("mouseleave", () => {
-  if (!video.paused) controls.classList.add("hidden");
-});
+const isMobile = window.innerWidth <= 768;
+
+if (!isMobile) {
+  videoContainer.addEventListener("mousemove", showControls);
+  videoContainer.addEventListener("mouseleave", () => {
+    if (!video.paused) controls.classList.add("hidden");
+  });
+} else {
+  controls.classList.remove("hidden"); // Always visible on mobile
+}
+
 
 video.addEventListener("play", updatePlayIcon);
 video.addEventListener("pause", updatePlayIcon);

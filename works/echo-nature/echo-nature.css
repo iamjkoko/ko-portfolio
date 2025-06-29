@@ -143,8 +143,8 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
-  margin: 100px auto;
-  width: 1280px;
+  margin: 120px auto 30px;
+  width: 1440px;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -194,8 +194,8 @@ video {
   transform: scale(0.92);
 }
 .controls img {
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(100%);
   background: transparent;
   background-color: transparent;
@@ -220,6 +220,39 @@ video {
 .volume-control:hover #volume-slider {
   opacity: 1;
   pointer-events: all;
+}
+@media (max-width: 935px) {
+  .video-container {
+    width: 360px;
+    margin: 5% auto 2%;
+  }
+  .controls {
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .left-controls, .right-controls {
+    width: auto;
+    gap: 1.5rem;
+  }
+  .controls button,
+  .volume-control {
+    flex: none;
+    justify-content: center;
+  }
+  .controls img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  #volume-slider {
+    width: 100%;
+    margin-left: 0;
+  }
+  .volume-control {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 
@@ -267,9 +300,6 @@ video {
   word-spacing: .1rem;
 }
 @media (max-width: 935px) {
-    #project-main {
-        min-height: 0;
-    }
     .project-info {
         flex-direction: column;
         margin-bottom: 10%;
