@@ -27,22 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  /*** Clickable Image Toggle (Shadow Images) ***/
-  document.querySelectorAll(".shadow").forEach((image) => {
-    image.setAttribute("data-active", "false");
-    const originalSrc = image.getAttribute("src");
-    const altSrc = image.getAttribute("data-alt");
-    // Preload the alternate image
-    const preloadImg = new Image();
-    preloadImg.src = altSrc;
-
-    image.addEventListener("click", () => {
-      const isActive = image.getAttribute("data-active") === "true";
-      image.src = isActive ? originalSrc : altSrc;
-      image.setAttribute("data-active", isActive ? "false" : "true");
-    });
-  });
 });
 
 /*** Scroll to Top Function ***/
