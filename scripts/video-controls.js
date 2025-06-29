@@ -28,7 +28,7 @@ function togglePlayPause() {
 
 // Update Play/Pause icon
 function updatePlayIcon() {
-  playIcon.src = video.paused ? "icons/play.png" : "icons/pause.png";
+  playIcon.src = video.paused ? "/icons/play.png" : "/icons/pause.png";
 }
 
 // Mute toggle
@@ -63,8 +63,8 @@ restartBtn.addEventListener("click", () => {
 // Volume icon update
 function updateVolumeIcon() {
   volumeIcon.src = video.muted || video.volume === 0
-    ? "icons/mute.png"
-    : "icons/volume.png";
+    ? "/icons/mute.png"
+    : "/icons/volume.png";
 }
 
 // Auto-hide controls
