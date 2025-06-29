@@ -45,9 +45,30 @@
     </div>
 
     <section id="project-main">
-        <video id="project-video-hor" src="https://res.cloudinary.com/db6ifdikq/video/upload/v1750677625/sd-nature-comp_eiaznn.mp4" controls controlsList="nodownload">
-            Your browser does not support the video tag.
-        </video>
+        <div class="video-container" id="video-container">
+            <video id="project-video" src="https://res.cloudinary.com/db6ifdikq/video/upload/v1750677625/sd-nature-comp_eiaznn.mp4" preload="metadata"></video>
+        
+            <div class="controls" id="controls">
+              <div class="left-controls">
+                <button id="restart">
+                  <img src="/icons/restart.png" alt="Restart" />
+                </button>
+        
+                <div class="volume-control" id="volume-control">
+                  <button id="mute-unmute">
+                    <img id="volume-icon" src="/icons/volume.png" alt="Volume" />
+                  </button>
+                  <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" />
+                </div>
+              </div>
+        
+              <div class="right-controls">
+                <button id="play-toggle">
+                  <img id="play-icon" src="/icons/play.png" alt="Play" />
+                </button>
+              </div>
+            </div>
+          </div>
 
         <hr class="divider">
 
@@ -76,6 +97,7 @@
     <div class="back-to-top" onclick="scrollToTop()">BACK TO TOP ↑</div>
 
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/video-controls.js"></script>
 
     <footer>
         <p>© 2025 Eric Ko. All rights reserved.</p>
