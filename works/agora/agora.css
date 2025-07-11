@@ -137,11 +137,17 @@ body {
 }
 }
 
+
+
+
 .divider {
   border: .8px solid #bdbdbd;
   width: 90%;
   margin: 20px auto;
 }
+
+
+
 
 #project-main {
     display: flex;
